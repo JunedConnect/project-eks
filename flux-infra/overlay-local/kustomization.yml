@@ -5,12 +5,12 @@ resources:
 configMapGenerator:
   - name: prom-graf-values
     files:
-      - values.yaml=values/prom-graf-values.yaml
+      - values.yaml=values/prom-graf-values.yml
   - name: external-dns-values
     files:
-      - values.yaml=values/external-dns-values.yaml
+      - values.yaml=values/external-dns-values.yml
   - name: cert-manager-values
     files:
-      - values.yaml=values/cert-manager-values.yaml
+      - values.yaml=values/cert-manager-values.yml
 configurations:
   - kustomizeconfig.yml
