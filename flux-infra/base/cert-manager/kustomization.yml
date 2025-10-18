@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
 - helm.yml
 - namespace.yml
-- issuer.yml
