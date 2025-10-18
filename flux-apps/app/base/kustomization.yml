@@ -4,4 +4,4 @@ resources:
 - ingress.yml
 - namespace.yml
 - service.yml
-- to-do-app.yml
+- app.yml

@@ -6,7 +6,7 @@ metadata:
     app: myapp
   namespace: myapp-ns
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: myapp
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: 677276074604.dkr.ecr.eu-west-2.amazonaws.com/to-do-app
+        image: nginx:1.28.0-alpine
         ports:
-        - containerPort: 8080
+        - containerPort: 80
