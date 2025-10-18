@@ -4,15 +4,15 @@ resources:
 - ../base
 configMapGenerator:
   - name: prom-graf-values
-    namespace: monitor
+    namespace: monitor # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/prom-graf-values.yml
   - name: external-dns-values
-    namespace: external-dns
+    namespace: external-dns # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/external-dns-values.yml
   - name: cert-manager-values
-    namespace: cert-manager
+    namespace: cert-manager # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/cert-manager-values.yml
 configurations:
