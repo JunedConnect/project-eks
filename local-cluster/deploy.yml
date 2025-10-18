@@ -9,7 +9,7 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: project-eks
+    name: flux-system # this references the GitRepository resource which points to the actual Git Repo
 
 ---
 
@@ -24,4 +24,4 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: project-eks
+    name: flux-system  # this references the GitRepository resource which points to the actual Git Repo
