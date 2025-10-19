@@ -1,0 +1,7 @@
+output "cert_manager_role_arn" {
+  value = aws_iam_role.cert-manager-role.arn
+}
+
+output "external_dns_role_arn" {
+  value = aws_iam_role.external-dns-role.arn
+}
