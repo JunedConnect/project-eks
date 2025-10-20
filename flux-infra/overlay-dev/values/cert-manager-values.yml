@@ -7,6 +7,5 @@ serviceAccount:
 
 extraArgs:
 - --dns01-recursive-nameservers="8.8.8.8:53"
-#- --dns01-recursive-nameservers-only # this is the old way of doing it
-- --dns01-recursive-nameservers-only="true"
+- --dns01-recursive-nameservers-only
 - --startupapicheck.timeout=5m # testing this to see if the timeout failure for cert-manager is resolved
