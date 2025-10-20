@@ -8,7 +8,7 @@ policy: sync # this will create and delete the records within Route 53
 
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::677276074604:role/external-dns-role"
+    eks.amazonaws.com/role-arn: arn:aws:iam::677276074604:role/external-dns-role
 
 aws:
   region: eu-west-2

@@ -3,7 +3,7 @@ crds:
 
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::677276074604:role/cert-manager-role"
+    eks.amazonaws.com/role-arn: arn:aws:iam::677276074604:role/cert-manager-role
 
 extraArgs:
 - --dns01-recursive-nameservers="8.8.8.8:53"
