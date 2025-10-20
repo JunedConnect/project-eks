@@ -33,3 +33,6 @@ spec:
   releaseName: external-dns
   targetNamespace: external-dns # this is where to deploy the resources
   interval: 10m0s # this is the interval for checking the release i.e. deployment of the chart
+  valuesFrom:
+    - kind: ConfigMap
+      name: external-dns-values
