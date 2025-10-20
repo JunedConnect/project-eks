@@ -12,7 +12,7 @@ metadata:
   namespace: external-dns
 spec:
   url: oci://registry-1.docker.io/bitnamicharts/external-dns
-  type: "oci"
+#  type: "oci"
 
 ---
 
