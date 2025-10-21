@@ -133,6 +133,12 @@ variable "external_dns_namespace" {
   default     = "external-dns"
 }
 
+variable "external_secrets_namespace" {
+  description = "The namespace for external-secrets"
+  type        = string
+  default     = "external-secrets"
+}
+
 
 #route53
 

@@ -15,6 +15,10 @@ configMapGenerator: # I chose the configMap way to input the values as it allows
     namespace: cert-manager # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/cert-manager-values.yml
+  - name: external-secrets-values
+    namespace: external-secrets # needed in order for configmap to be created in the correct namespace
+    files:
+      - values.yaml=values/external-secrets-values.yml
 configurations:
   - kustomizeconfig.yml
 

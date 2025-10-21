@@ -28,6 +28,7 @@ eks_node_group_role_name                    = "eks-node-group-role"
 # Pod Identity
 cert_manager_namespace = "cert-manager"
 external_dns_namespace = "external-dns"
+external_secrets_namespace = "external-secrets"
 
 # Route53
 domain_name = "lab.juned.co.uk"

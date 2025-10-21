@@ -13,6 +13,11 @@ variable "external_dns_namespace" {
   type        = string
 }
 
+variable "external_secrets_namespace" {
+  description = "The namespace for external-secrets"
+  type        = string
+}
+
 variable "route53_zone_id" {
   description = "Route 53 hosted zone ID"
   type        = string
