@@ -14,7 +14,7 @@ spec:
   url: oci://registry-1.docker.io/bitnamicharts/external-dns
   type: "oci"
   secretRef:
-    name: dockerhub-credentials
+    name: dockerhub-secret
 
 ---
 
