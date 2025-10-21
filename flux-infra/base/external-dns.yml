@@ -15,7 +15,7 @@ spec:
   type: "oci"
   secretRef:
     name: dockerhub-secret
-    namespace: external-secrets
+    namespace: external-dns
 
 ---
 
