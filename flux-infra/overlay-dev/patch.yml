@@ -1,0 +1,40 @@
+- patch: |-
+      - op: replace
+        path: /spec/chart/spec/version
+        value: v1.19.1
+  target:
+      group: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: cert-manager
+- patch: |-
+      - op: replace
+        path: /spec/chart/spec/version
+        value: v1.19.0
+  target:
+      group: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: external-dns
+- patch: |-
+      - op: replace
+        path: /spec/chart/spec/version
+        value: v0.20.3
+  target:
+      group: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: external-secrets
+- patch: |-
+      - op: replace
+        path: /spec/chart/spec/version
+        value: v4.13.0
+  target:
+      group: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: nginx-ingress
+- patch: |-
+      - op: replace
+        path: /spec/chart/spec/version
+        value: v78.3.2
+  target:
+      group: helm.toolkit.fluxcd.io/v2
+      kind: HelmRelease
+      name: prom-graf
