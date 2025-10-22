@@ -69,7 +69,7 @@ patches:
     patch: |-
       - op: replace
         path: /spec/chart/spec/chart/version
-        value: v4.13.3
+        value: v4.13.0
   - target:
       group: helm.toolkit.fluxcd.io/v2
       kind: HelmRelease
