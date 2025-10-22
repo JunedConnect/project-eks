@@ -2,9 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
-
----
-
 configMapGenerator: # I chose the configMap way to input the values as it allows for flux to redeploy the resources if the values change
   - name: prom-graf-values
     namespace: monitor # needed in order for configmap to be created in the correct namespace
@@ -30,6 +27,7 @@ configurations:
   # - used a patch in this file to input the direct values into the helm releases. This would avoid the issues in the first option, but would make file very messy and hard to read.
 
   # Therefore, I decided to use the kustomize configmap way to generate and input the values.yml for the helm releases. This is because it allows for flux to redeploy the helm releases with the new values, if the values change.
+
 
 # ---
 
