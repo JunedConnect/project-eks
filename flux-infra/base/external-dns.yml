@@ -24,7 +24,7 @@ spec:
   chart:
     spec:
       chart: external-dns
-      version: v0.19.0
+      version: v1.19.0
       interval: 10m0s # this is the interval for checking the chart i.e. version
       sourceRef:
         kind: HelmRepository
