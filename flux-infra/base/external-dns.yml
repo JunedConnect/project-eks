@@ -11,10 +11,7 @@ metadata:
   name: external-dns
   namespace: external-dns
 spec:
-  url: oci://registry-1.docker.io/bitnamicharts/external-dns
-  type: "oci"
-  secretRef:
-    name: dockerhub-secret
+  url: https://kubernetes-sigs.github.io/external-dns/
 
 ---
 
@@ -27,7 +24,7 @@ spec:
   chart:
     spec:
       chart: external-dns
-      version: v9.0.2
+      version: v0.19.0
       interval: 10m0s # this is the interval for checking the chart i.e. version
       sourceRef:
         kind: HelmRepository
