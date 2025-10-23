@@ -1,7 +1,7 @@
 
 serviceAccount:
   create: true # default is true
-  name: headlamp-admin
+  name: "headlamp-admin"
   annotations: {}
 
 ingress:
