@@ -13,14 +13,18 @@ configMapGenerator: # I chose the configMap way to input the values as it allows
     namespace: external-dns # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/external-dns-values.yml
-  - name: cert-manager-values
-    namespace: cert-manager # needed in order for configmap to be created in the correct namespace
-    files:
-      - values.yaml=values/cert-manager-values.yml
   - name: external-secrets-values
     namespace: external-secrets # needed in order for configmap to be created in the correct namespace
     files:
       - values.yaml=values/external-secrets-values.yml
+  - name: headlamp-values
+    namespace: headlamp # needed in order for configmap to be created in the correct namespace
+    files:
+      - values.yaml=values/headlamp-values.yml
+  - name: cert-manager-values
+    namespace: cert-manager # needed in order for configmap to be created in the correct namespace
+    files:
+      - values.yaml=values/cert-manager-values.yml
 configurations:
   - kustomizeconfig.yml
 
