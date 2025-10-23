@@ -4,5 +4,6 @@ resources:
 - cert-manager.yml
 - external-dns.yml
 - external-secrets.yml
+- headlamp.yml
 - nginx.yml
 - prom-graf.yml
