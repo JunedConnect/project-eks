@@ -1,3 +1,8 @@
+config:
+  enableHelm: true # default is true
+  watchPlugins: true # defualt is false
+  pluginsDir: /build/plugins
+
 serviceAccount:
   create: true # default is true
   name: "headlamp-admin"
@@ -23,3 +28,38 @@ securityContext:
 clusterRoleBinding:
   create: true # default is true
   clusterRoleName: cluster-admin # default is "cluster-admin" # test out the "view" role
+
+pluginsManager:
+  enabled: true
+
+
+
+# below is the installation of the flux plugin
+initContainers:
+  - command:
+      - /bin/sh
+      - -c
+      - mkdir -p /build/plugins && cp -r /plugins/* /build/plugins/ && chown -R 100:101 /build
+    image: ghcr.io/headlamp-k8s/headlamp-plugin-flux:0.4.0
+    imagePullPolicy: Always
+    name: headlamp-plugins
+    securityContext:
+      runAsNonRoot: false
+      privileged: false
+      runAsUser: 0
+      runAsGroup: 0
+    volumeMounts:
+      - mountPath: /build/plugins
+        name: headlamp-plugins
+persistentVolumeClaim:
+  accessModes:
+    - ReadWriteOnce
+  enabled: true
+  size: 1Gi
+volumeMounts:
+  - mountPath: /build/plugins
+    name: headlamp-plugins
+volumes:
+  - name: headlamp-plugins
+    persistentVolumeClaim:
+      claimName: headlamp # The name of the Helm release
