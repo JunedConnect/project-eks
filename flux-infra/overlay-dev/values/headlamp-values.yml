@@ -1,4 +1,3 @@
-
 serviceAccount:
   create: true # default is true
   name: "headlamp-admin"
@@ -8,15 +7,15 @@ ingress:
   enabled: true # default is false
   ingressClassName: "nginx"
   hosts:
-    - headlamp.lab.juned.co.uk
+    - host: headlamp.lab.juned.co.uk
   tls:
     - secretName: headlamp-ingress-tls
       hosts:
-      - headlamp.lab.juned.co.uk
+        - headlamp.lab.juned.co.uk
 
 securityContext:
-  runasNonRoot: true # default is true
-  privilged: false # default is false
+  runAsNonRoot: true # default is true
+  privileged: false # default is false
 
 clusterRoleBinding:
   create: true # default is true
