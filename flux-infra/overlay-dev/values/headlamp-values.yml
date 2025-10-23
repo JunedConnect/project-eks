@@ -8,6 +8,8 @@ ingress:
   ingressClassName: "nginx"
   hosts:
     - host: headlamp.lab.juned.co.uk
+      paths:
+        - path: /
   tls:
     - secretName: headlamp-ingress-tls
       hosts:
