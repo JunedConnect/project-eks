@@ -10,7 +10,7 @@ ingress:
     - host: headlamp.lab.juned.co.uk
       paths:
         - path: /
-          type: prefix
+          type: Prefix
   tls:
     - secretName: headlamp-ingress-tls
       hosts:
