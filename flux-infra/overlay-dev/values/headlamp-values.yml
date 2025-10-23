@@ -22,4 +22,4 @@ securityContext:
 
 clusterRoleBinding:
   create: true # default is true
-  clusterRoleName: "cluster-admin" # default is "cluster-admin" # test out the "view" role
+  clusterRoleName: view" # default is "cluster-admin" # test out the "view" role
