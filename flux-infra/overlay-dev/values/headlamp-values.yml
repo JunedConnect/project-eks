@@ -1,4 +1,7 @@
 config:
+  oidc:
+    secret:
+      create: false # default is true
   enableHelm: true # default is true
   watchPlugins: true # defualt is false
   pluginsDir: /build/plugins
@@ -29,9 +32,6 @@ clusterRoleBinding:
   create: true # default is true
   clusterRoleName: cluster-admin # default is "cluster-admin" # test out the "view" role
 
-pluginsManager:
-  enabled: true
-
 
 
 # below is the installation of the flux plugin
@@ -51,14 +51,17 @@ initContainers:
     volumeMounts:
       - mountPath: /build/plugins
         name: headlamp-plugins
+
 persistentVolumeClaim:
   accessModes:
     - ReadWriteOnce
   enabled: true
   size: 1Gi
+
 volumeMounts:
   - mountPath: /build/plugins
     name: headlamp-plugins
+
 volumes:
   - name: headlamp-plugins
     persistentVolumeClaim:
