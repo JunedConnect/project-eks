@@ -40,7 +40,7 @@ initContainers:
       - /bin/sh
       - -c
       - mkdir -p /build/plugins && cp -r /plugins/* /build/plugins/ && chown -R 100:101 /build
-    image: ghcr.io/headlamp-k8s/headlamp-plugin-flux:0.3.0
+    image: ghcr.io/headlamp-k8s/headlamp-plugin-flux:latest
     imagePullPolicy: Always
     name: headlamp-plugins
     securityContext:
