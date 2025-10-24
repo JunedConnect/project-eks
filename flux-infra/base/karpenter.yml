@@ -25,7 +25,7 @@ spec:
   chart:
     spec:
       chart: karpenter
-      version: v1.8.1
+      version: 1.8.2
       interval: 10m0s # this is the interval for checking the chart i.e. version
       sourceRef:
         kind: HelmRepository
