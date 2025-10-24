@@ -50,18 +50,13 @@ initContainers:
       privileged: false
       runAsUser: 0
       runAsGroup: 0
-    volumeMounts:
+    volumeMounts: # volume mount for the init container
       - mountPath: /build/plugins
         name: headlamp-plugins
 
-#volumes set up that is needed for plugin to work
-persistentVolumeClaim:
-  accessModes:
-    - ReadWriteOnce
-  enabled: true
-  size: 1Gi
 
-volumeMounts:
+#volumes set up that is needed for plugin to work
+volumeMounts: # volume mount for the headlamp container
   - mountPath: /build/plugins
     name: headlamp-plugins
 
