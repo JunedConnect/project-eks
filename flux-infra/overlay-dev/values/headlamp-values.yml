@@ -68,5 +68,5 @@ volumeMounts:
 volumes:
   - name: headlamp-plugins
     emptyDir: {} # decided to use a temp volume as there is no actual data that I need to be persistent (since the headlamp app only has to use the static files htat the plugin installs on that directory for as long as the headlamp app, i.e. the pod, runs). Empty dir works here only because the headlamp app container and the plugin container exist in the same pod
-    persistentVolumeClaim:
-      claimName: headlamp # The name of the Helm release
+    # persistentVolumeClaim:
+    #   claimName: headlamp # The name of the Helm release
